@@ -91,7 +91,19 @@ SSH into the control node and follow the steps below:
 Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? filebeat-playbook.yml
 - _Where do you copy it? /etc/ansible/roles/filebeat-playbook.yml
-- _Which file do you update to make Ansible run the playbook on a specific machine? pentest.yml How do I specify which machine to install the ELK server on versus which to install Filebeat on? install-elk.yml
+- _Which file do you update to make Ansible run the playbook on a specific machine? pentest.yml 
+- _How do I specify which machine to install the ELK server on versus which to install Filebeat on? install-elk.yml
 - _Which URL do you navigate to in order to check that the ELK server is running? `http://[my-private-IP]:5601/app/kibana`
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+- _SSH into jumpBox Vm ssh sysadmin@[Public IP address]
+- _Run sudo docker container list -a
+- _Run sudo docker start container [Container name]
+- _Run sudo docker attach container [Container name]
+- _Run ansible-playbook install-elk.yml
+- _After the Elk container is installed double check elk-docker container is running by SSH into Elk-SVR VM ssh sysadmin@[private IP address]
+- _Run sudo docker ps
+- _Since the Elk server runs on specific ports you need to create an incoming rule for the security group that allows TCP traffic over the necessary port from your IP address.
+- _Check that you can load the ELK stack server at http://[your-IP]:5601/app/kibana.
+- _If everthing works correcty, you should see the home webpage of kibana.
