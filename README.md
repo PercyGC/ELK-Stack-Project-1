@@ -100,7 +100,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 - _Run sudo docker container list -a
 - _Run sudo docker start container [Container name]
 - _Run sudo docker attach container [Container name]
-- _Run ansible-playbook elk.yml
+- _Run ansible-playbook install-elk.yml
 - _After the Elk container is installed double check elk-docker container is running by SSH into Elk-SVR VM ssh sysadmin@[private IP address]
 - _Run sudo docker ps
 - _Since the Elk server runs on specific ports you need to create an incoming rule for the security group that allows TCP traffic over the necessary port from your IP address.
